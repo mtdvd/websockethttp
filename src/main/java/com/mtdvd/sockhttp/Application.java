@@ -35,6 +35,7 @@ public class Application {
         StandardHost host = (StandardHost)containers[0];
         containers = host.findChildren();
         StandardContext ctx = (StandardContext)containers[0];
+        ctx.setParentClassLoader(Thread.currentThread().getContextClassLoader());//solves a strange issue with starting embedded tomcat from maven exec plugin
         //declare an alternate location for your "WEB-INF/classes" dir:     
         File additionWebInfClasses = new File("target/classes");
         VirtualDirContext resources = new VirtualDirContext();

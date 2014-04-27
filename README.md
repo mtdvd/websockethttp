@@ -8,7 +8,8 @@ A Controller that needs to serve both websocket and http requests should simply 
    
 ## Running the example
 ### Prerequisites
-* Make sure you have java 7 installed and that it is in your path
+* Java 7 is installed on your machine
+* Environment variable `JAVA_HOME` is set with the location of a JDK home dir
 
 ### Building & Executing
 

@@ -18,11 +18,15 @@ To compile and run the tests, open your command line console in the project root
  
     mvnw install
 
-To see the live demo, type:
+For executing the demo:
 
-	mvnw exec:java
+1. type:
+
+    `mvnw exec:java`
+		
+2. Open your browser and navigate to `http://localhost:8080/index.jsp`
 	
-#### Worth mentioning:
+#### Noteworthy:
 To facilitate the compile process the project uses [maven-wrapper-plugin](https://github.com/bdemers/maven-wrapper).
     
 To make the execution easy it uses embedded [tomcat](http://tomcat.apache.org/) and [Exec Maven Plugin](http://mojo.codehaus.org/exec-maven-plugin/)

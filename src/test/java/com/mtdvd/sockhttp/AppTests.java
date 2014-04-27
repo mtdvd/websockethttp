@@ -29,11 +29,11 @@ public class AppTests {
 
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
-    protected WebApplicationContext wac;
+    protected WebApplicationContext webApplicationContext;
 
     @Before
     public void setup() {
-        this.mockMvc = webAppContextSetup(this.wac).build();
+        this.mockMvc = webAppContextSetup(this.webApplicationContext).build();
     }
 
     @Test
@@ -45,7 +45,7 @@ public class AppTests {
         mockMvc.perform(post("/hello").content(jsonMessage)
                 .accept(MediaType.APPLICATION_JSON).headers(httpHeaders))
                 .andExpect(status().isOk())
-                .andExpect(content().string(new ObjectMapper().writeValueAsString(new Greeting("John"))));
+                .andExpect(content().string(new ObjectMapper().writeValueAsString(new Greeting(personName))));
     }
 
     @Test

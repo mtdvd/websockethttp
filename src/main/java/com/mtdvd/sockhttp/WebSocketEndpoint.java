@@ -20,12 +20,12 @@ import java.util.Map;
  * @since 4/19/2014
  */
 @ServerEndpoint("/ws/{requestUri}")
-public class WebSocketEndopoint {
+public class WebSocketEndpoint {
 
-    private static HashMap<String, WebSocketMessageHandler> requestUrisToHandlersMap = new HashMap<>();
-    private        ObjectMapper                             jsonObjectMapper         = new ObjectMapper();
+    private static Map<String, WebSocketMessageHandler> requestUrisToHandlersMap = new HashMap<>();
+    private        ObjectMapper                         jsonObjectMapper         = new ObjectMapper();
 
-    public WebSocketEndopoint() {
+    public WebSocketEndpoint() {
         requestUrisToHandlersMap.putAll(createMapOfRequestUrisToHandlers(this));
     }
 

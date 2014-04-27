@@ -50,7 +50,7 @@ public class AppTests {
 
     @Test
     public void testMapWebSocketEndpoints() {
-        Map<String, WebSocketMessageHandler> mapOfRequestUrisToHandlers = new WebSocketEndopoint().createMapOfRequestUrisToHandlers(new TestController());
+        Map<String, WebSocketMessageHandler> mapOfRequestUrisToHandlers = new WebSocketEndpoint().createMapOfRequestUrisToHandlers(new TestController());
         Assert.assertTrue(mapOfRequestUrisToHandlers.containsKey("/test"));
     }
 

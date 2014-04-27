@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class GreetingController extends WebSocketEndopoint{
+public class GreetingController extends WebSocketEndpoint {
 
 	@RequestMapping("/hello")
 	public @ResponseBody Greeting welcome(@RequestBody HelloMessage helloMessage) {

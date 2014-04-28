@@ -1,7 +1,7 @@
 websockethttp
 =============
 
-A Java based project that shows an example of using Spring's [@RequestMapping](http://docs.spring.io/spring-framework/docs/4.0.x/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html) annotation for serving websocket endpoints as well.
+A Java based project that shows an example of using Spring's [@RequestMapping](http://docs.spring.io/spring-framework/docs/4.0.x/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html) annotation for serving not only http requests but also as a websocket endpoint.
 
 ## Implementation
 A Controller that needs to serve both websocket and http requests should simply extends `WebSocketEndpoint`
